@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bus Reservation System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 36px;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        nav {
+            background-color: #004d40;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #004d40;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #00695c;
+        }
+
+        .hero {
+            background-image: url('https://wallpapercave.com/wp/wp4390828.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .buttons a {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .signin {
+            background-color: #0288d1;
+        }
+
+        .login {
+            background-color: #388e3c;
+        }
+
+        .signin:hover {
+            background-color: #0277bd;
+        }
+
+        .login:hover {
+            background-color: #2e7d32;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00796b;
+            color: white;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Online Bus Reservation System
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="book-tickets.html">Book Tickets</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="stations.html">Stations</a></li>
+            <li><a href="meals.html">Meals</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome</h1>
+        <p>Book your bus tickets online with ease!</p>
+        <div class="buttons">
+            <a href="location.html" class="signin">Book Ticket</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Online Bus Reservation System. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

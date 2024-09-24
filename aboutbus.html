@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Reservation - About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:url('https://wallpapercave.com/wp/wp4390828.jpg');
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(18, 89, 212);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #020202;
+            margin-bottom: 20px;
+        }
+        .bus-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .bus-card {
+            width: 30%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .bus-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .bus-card h3 {
+            margin: 15px 0;
+            font-size: 20px;
+            color: #007bff;
+        }
+        .bus-card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .select-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .select-btn:hover {
+            background-color: #218838;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .bus-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="seat_selection.html" method="POST">
+    <div class="container">
+        <h1>About Us - Our Bus Services</h1>
+        <div class="bus-info">
+            <!-- NueGo Bus -->
+            <div class="bus-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.PyZ3CNbUaMyRwoBzuDWKfAHaEV&pid=Api&P=0&h=180" alt="NueGo Bus">
+                <h3>NueGo Bus Services</h3>
+                <p>Comfortable and reliable services across major cities.</p>
+                <button class="select-btn" value="NueGo_Bus">Select</button>
+            </div>
+
+            <!-- AbhiBus -->
+            <div class="bus-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.d4_1j--OaVqtbva9USjciAAAAA&pid=Api&P=0&h=180" alt="AbhiBus">
+                <h3>AbhiBus Services</h3>
+                <p>Safe and secure bus journeys with extensive coverage.</p>
+                <button class="select-btn" value="Abhibus">Select</button>
+            </div>
+
+            <!-- Meghana Bus -->
+            <div class="bus-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.yZs-lKcOi24PCvMu4QtA1AHaDR&pid=Api&P=0&h=180" alt="Meghana Bus">
+                <h3>Meghana Bus Services</h3>
+                <p>Luxury buses with excellent facilities and service.</p>
+                <button class="select-btn" value="Meghana_Bus">Select</button>
+            </div>
+
+            <!-- Amaravathi Bus -->
+            <div class="bus-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.8GCNtzoJhnOK2_DmnVClngHaEK&pid=Api&P=0&h=180" alt="Amaravathi Bus">
+                <h3>Amaravathi Bus Services</h3>
+                <p>Affordable and punctual bus services for all your travel needs.</p>
+                <button class="select-btn" value="Amaravathi_Bus">Select</button>
+            </div>
+
+            <!-- Rajadhani Bus -->
+            <div class="bus-card">
+                <img src="https://s3-ap-southeast-1.amazonaws.com/rbplus/BusImage/Domestic/18491_1321_1.png" alt="Rajadhani Bus">
+                <h3>Rajadhani Bus Services</h3>
+                <p>Premium bus services with comfortable seating and amenities.</p>
+                <button class="select-btn" value="Rajadhani_Bus">Select</button>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bus Reservation System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

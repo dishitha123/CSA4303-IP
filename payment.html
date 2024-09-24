@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url('https://wallpapercave.com/wp/wp4390828.jpg');
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .payment-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .payment-option:hover {
+            background-color: #e9ecef;
+        }
+
+        .details {
+            display: none;
+            padding: 15px;
+            background-color: #e9ecef;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .details h2 {
+            margin: 0;
+        }
+
+        .select-button {
+            padding: 8px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .select-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <form action="confirmation.html" method="POST">
+    <div class="container">
+        <h1>Payment Options</h1>
+
+        <div class="payment-option">
+            <span>Paytm</span>
+            <button class="select-button" onclick="toggleDetails('paytm-details')">Select</button>
+        </div>
+        <div id="paytm-details" class="details">
+            <h2>Paytm Payment Details</h2>
+            <p>Please pay using the following details:</p>
+            <p><strong>Paytm Number:</strong> 9876543210</p>
+            <p><strong>UPI ID:</strong> paytm@upi</p>
+        </div>
+
+        <div class="payment-option">
+            <span>PhonePe</span>
+            <button class="select-button" onclick="toggleDetails('phonepe-details')">Select</button>
+        </div>
+        <div id="phonepe-details" class="details">
+            <h2>PhonePe Payment Details</h2>
+            <p>Please pay using the following details:</p>
+            <p><strong>PhonePe Number:</strong> 9876543211</p>
+            <p><strong>UPI ID:</strong> phonepe@upi</p>
+        </div>
+
+        <div class="payment-option">
+            <span>Google Pay</span>
+            <button class="select-button" onclick="toggleDetails('googlepay-details')">Select</button>
+        </div>
+        <div id="googlepay-details" class="details">
+            <h2>Google Pay Payment Details</h2>
+            <p>Please pay using the following details:</p>
+            <p><strong>Google Pay Number:</strong> 9876543212</p>
+            <p><strong>UPI ID:</strong> googlepay@upi</p>
+        </div>
+    </div>
+</form>
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            // Toggle the display of the clicked payment option's details
+            details.style.display = details.style.display === 'none' || details.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

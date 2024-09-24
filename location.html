@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Reservation - Location</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url('https://camo.envatousercontent.com/4310ef68f4cba1783a93c66a869bd52415dcec3c/687474703a2f2f692e696d6775722e636f6d2f684d73327862712e6a7067');
+            background-size: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input, select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bus Reservation - Choose Your Location</h1>
+        <form action="location.php" method="POST">
+            <div class="form-group">
+                <label for="source">Source:</label>
+                <select id="source" name="source" required>
+                    <option value="">Select Source</option>
+                    <option value="New York">New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Houston">Houston</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination" required>
+                    <option value="">Select Destination</option>
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="Las Vegas">Las Vegas</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Miami">Miami</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date of Journey:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Time of Journey:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <input type="submit" value="Next">
+        </form>
+    </div>
+</body>
+</html>

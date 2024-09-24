@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Status - Online Bus Reservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url('https://wallpapercave.com/wp/wp4390828.jpg');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            width: 400px;
+        }
+        .status {
+            display: none;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .success {
+            background-color: #e0f7e9;
+            color: #2d7a3d;
+            border: 2px solid #2d7a3d;
+        }
+        .failed {
+            background-color: #f7e0e0;
+            color: #a33d3d;
+            border: 2px solid #a33d3d;
+        }
+        .show {
+            display: block;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #35424a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e8491d;
+        }
+        .details {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .details p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Payment Status</h1>
+        
+        <!-- Success Message -->
+        <div id="success" class="status success">
+            <h2>Payment Successful!</h2>
+            <p>Your payment has been successfully processed. Thank you for booking with us!</p>
+            
+            <div class="details">
+                <p><strong>Name:</strong> vavilathotadishitha</p>
+                <p><strong>Email:</strong> vavilathotodishitha@gmail.com</p>
+                <p><strong>Age:</strong> 20</p>
+                <p><strong>Gender:</strong> Female</p>
+                <p><strong>Source:</strong> City A</p>
+                <p><strong>Destination:</strong> City B</p>
+            </div>
+        </div>
+
+        <!-- Failure Message -->
+        <div id="failed" class="status failed">
+            <h2>Payment Failed!</h2>
+            <p>We encountered an issue processing your payment. Please try again.</p>
+        </div>
+
+        <!-- Toggle Button to switch between Success and Failed -->
+        <button onclick="toggleStatus()">Toggle Payment Status</button>
+        <br><br>
+        <!-- Cancel Button -->
+        <button onclick="cancelPayment()">Cancel Payment</button>
+    </div>
+
+    <script>
+        let isSuccess = true;
+
+        function toggleStatus() {
+            const successDiv = document.getElementById('success');
+            const failedDiv = document.getElementById('failed');
+
+            if (isSuccess) {
+                successDiv.classList.add('show');
+                failedDiv.classList.remove('show');
+            } else {
+                successDiv.classList.remove('show');
+                failedDiv.classList.add('show');
+            }
+
+            isSuccess = !isSuccess;
+        }
+
+        function cancelPayment() {
+            alert('Your payment has been cancelled.');
+        }
+
+        // Initially show payment success
+        toggleStatus();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Reservation - Seat Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapercave.com/wp/wp4390828.jpg');
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-image: url('https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_728/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/xb3gaajbavt7hthsqbvn/GreyhoundAustraliaHopOnHopOffBusPassfromMelbourne(3Months).jpg');
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(65, 239, 12, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Bus seat layout grid */
+        .bus-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Four seats per row */
+            gap: 15px;
+            padding: 0 20px;
+        }
+
+        /* Seat styling */
+        .seat {
+            position: relative;
+            width: 60px;
+            height: 120px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Locked seat */
+        .seat.locked {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Price display inside the seat */
+        .seat .price {
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: #e61010;
+        }
+
+        /* Select button inside the seat */
+        .seat .select-btn {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            font-size: 12px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .seat .select-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Gender seat indicators (use icons or text) */
+        .seat.male {
+            background-color: #d0ebff;
+            border: 2px solid #007bff;
+        }
+
+        .seat.female {
+            background-color: #ffd6e7;
+            border: 2px solid #ff69b4;
+        }
+
+        .seat.all {
+            background-color: #e0ffe0;
+            border: 2px solid #28a745;
+        }
+
+        /* Bottom legend section for seat availability */
+        .legend {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .legend div {
+            display: flex;
+            align-items: center;
+        }
+
+        .legend div span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .legend .available-for-all span {
+            background-color: #e0ffe0;
+            border: 2px solid #28a745;
+        }
+
+        .legend .available-for-female span {
+            background-color: #ffd6e7;
+            border: 2px solid #ff69b4;
+        }
+
+        .legend .available-for-male span {
+            background-color: #d0ebff;
+            border: 2px solid #007bff;
+        }
+
+        .berth-heading {
+            font-size: 18px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="payment.html" method="POST">
+    <div class="container">
+        <h1>Bus Reservation - Seat Selection</h1>
+
+        <!-- Upper Berth Section -->
+        <h2 class="berth-heading">Upper Berth</h2>
+        <div class="bus-layout">
+            <!-- Row 1 - Upper Berth -->
+            <div class="seat male">
+                <span>1</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="seat female">
+                <span>2</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="seat locked">
+                <span>3</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn" disabled>Select</button>
+            </div>
+            <div class="seat all">
+                <span>4</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+
+            <!-- Row 2 - Upper Berth -->
+            <div class="seat male">
+                <span>5</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="seat female">
+                <span>6</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="seat locked">
+                <span>7</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn" disabled>Select</button>
+            </div>
+            <div class="seat all">
+                <span>8</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+        </div>
+
+        <!-- Lower Berth Section -->
+        <h2 class="berth-heading">Lower Berth</h2>
+        <div class="bus-layout">
+            <!-- Row 1 - Lower Berth -->
+            <div class="seat all">
+                <span>9</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="seat female">
+                <span>10</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="seat male">
+                <span>11</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="seat locked">
+                <span>12</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn" disabled>Select</button>
+            </div>
+
+            <!-- Row 2 - Lower Berth -->
+            <div class="seat female">
+                <span>13</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="seat all">
+                <span>14</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="seat locked">
+                <span>15</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn" disabled>Select</button>
+            </div>
+            <div class="seat male">
+                <span>16</span>
+                <div class="price">₹1863</div>
+                <button class="select-btn">Select</button>
+            </div>
+        </div>
+
+        <!-- Legend for seat availability -->
+        <div class="legend">
+            <div class="available-for-all">
+                <span></span> Available for all
+            </div>
+            <div class="available-for-female">
+                <span></span> Available for female
+            </div>
+            <div class="available-for-male">
+                <span></span> Available for male
+            </div>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
